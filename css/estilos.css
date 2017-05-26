@@ -1,0 +1,63 @@
+
+
+#titulo{
+	color:#83FF23;
+}
+
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: black;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #83FF23;
+}
+
+.navbar{
+
+margin-bottom: 0;
+
+}
+
+.jumbotron .titulo{
+	font-size: 3em;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.40);
+}
+.jumbotron {
+	background: #999999;
+	color: #83FF23;
+	padding: 20px 0;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.40);
+
+
+}
+
+/* -- POST -- */
+
+.main {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background: #FFFFFF;
+}
+
+.post {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid;
+}
+
+.post .post-title a{
+	color: black;
+
+}
+
+.post .thumb {
+	margin-right: 10px;
+	width: 40%;
+
+}
+
+
+.post .thumb img{
+	width: 100%;
+}
