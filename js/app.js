@@ -1,8 +1,9 @@
-var app = angular.module('appDazam',[]);
+var app = angular.module('appDazam',['ngRoute']);
 
 app.controller('mainCtrl', ['$scope', function($scope){
   
-  $scope.titulo = "Alex";
+  $scope.header = "paginas/header.html";
+  $scope.footer = "paginas/footer.html";
 
  
 
