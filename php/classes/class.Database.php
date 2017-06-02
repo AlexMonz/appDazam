@@ -15,7 +15,7 @@ class Database{
 	private $_host = "localhost";
 	private $_user = "root";
 	private $_pass = "";
-	private $_db   = "pro";
+	private $_db   = "tienda_dazam";
 
 
 	// Almacenar una unica instancia
