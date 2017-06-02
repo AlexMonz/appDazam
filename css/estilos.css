@@ -20,17 +20,23 @@ margin-bottom: 0;
 
 .jumbotron .titulo{
 	font-size: 3em;
-	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.40);
+	color: #83FF23;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
+
+
+/* -- header -- */
+
 .jumbotron {
-	background: #999999;
 	color: #83FF23;
 	padding: 20px 0;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.40);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	height: 600px;
 
 
 }
+
+/* -- fin header -- */
 
 /* -- POST -- */
 
@@ -84,8 +90,13 @@ margin-bottom: 0;
 
 /*--TIENDA--*/
 
+.carro{
+	margin: 20px 10px;
+	height: 50px;
+}
+
 .caja{
-	margin: 100px 100px;
+	margin: 10px 10px;
 }
 
 /*--FIN DE TIENDA*/
