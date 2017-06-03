@@ -23,5 +23,8 @@ app.config( function ($routeProvider) {
 		.when('/Login', {
 			templateUrl: 'paginas/login.html'
 		})
+		.when('/admin', {
+			templateUrl: 'paginas/panel.html'
+		})
 		.otherwise({ redirectTo: '/' })
 });
