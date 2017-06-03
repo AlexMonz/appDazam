@@ -27,22 +27,16 @@ margin-bottom: 0;
 
 /* -- header -- */
 
-.jumbotron {
-	color: #83FF23;
-	padding: 20px 0;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-	height: 600px;
-
-}
-
 .bg-1{ 
        background-color: rgb(92,184,92); /* Green */
         color: #ffffff;
+        
     }
 
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
+   
 }    
 
 
