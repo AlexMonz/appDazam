@@ -12,7 +12,7 @@ app.config( function ($routeProvider) {
 			templateUrl: 'paginas/contacto.html'
 		})
 		.when('/Calderas', {
-			templateUrl: 'paginas/calderas.html'
+			templateUrl: 'paginas/calderas.html',
 		})
 		.when('/Calefaccion', {
 			templateUrl: 'paginas/calefaccion.html'
@@ -21,7 +21,8 @@ app.config( function ($routeProvider) {
 			templateUrl: 'paginas/instalaciones.html'
 		})
 		.when('/admin', {
-			templateUrl: 'paginas/panel.html'
+			templateUrl: 'paginas/panel.html',
+			controller: 'panelCtrl'
 		})
 		.otherwise({ redirectTo: '/' })
 });
