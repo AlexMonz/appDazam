@@ -17,7 +17,7 @@
   				<td>{{prod.descripcion}}</td>
   				<td>{{prod.precio}}</td>
   				<td><img src="{{prod.img}}" alt="..." class="img-thumbnail"></td>
-  				<td><a href="{{prod.id}}" class="btn btn-success" data-toggle="modal" data-target="#myModal">EDITAR</a></td>
+  				<td><button class="btn btn-success" data-toggle="modal" data-target="#myModal">EDITAR</button></td>
   			</tr>
 		</table>
 		<ul class="pager">
@@ -61,9 +61,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <pre>
-          {{prod.id}}
-        </pre>
       </div>
     </div>
 
