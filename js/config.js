@@ -20,9 +20,14 @@ app.config( function ($routeProvider) {
 		.when('/Instalaciones', {
 			templateUrl: 'paginas/instalaciones.html'
 		})
-		.when('/admin', {
-			templateUrl: 'paginas/panel.html',
-			controller: 'panelCtrl'
+		.when('/productos', {
+			templateUrl: 'paginas/productos.html',
+			controller: 'productosCtrl'
+		})
+		.when('/producto/:id', {
+			templateUrl: 'paginas/producto.html',
+			controller: 'productoCtrl'
+			
 		})
 		.otherwise({ redirectTo: '/' })
 });

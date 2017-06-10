@@ -1,4 +1,4 @@
-app.controller('panelCtrl', ['$scope', '$http', function($scope,$http){
+app.controller('productosCtrl', ['$scope', '$http', function($scope,$http){
   
  $scope.productos = {};
  $scope.posicion  = 3;

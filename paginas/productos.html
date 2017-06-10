@@ -6,18 +6,22 @@
   			<tr>
   				<th>ID</th>
   				<th>MARCA</th>
+          <th>MODELO</th>
   				<th>DESCRIPCION</th>
    				<th>PRECIO</th>
    				<th>IMAGEN</th>
-   				<th>EDITAR</th>
+   				<th>VER</th>
+          <th>EDITAR</th>
   			</tr>
   			<tr ng-repeat = "prod in productos | limitTo: posicion | limitTo: -3">
   				<td>{{prod.id}}</td>
   				<td>{{prod.nombre}}</td>
+          <td>{{prod.modelo}}</td>
   				<td>{{prod.descripcion}}</td>
   				<td>{{prod.precio}}</td>
   				<td><img src="{{prod.img}}" alt="..." class="img-thumbnail"></td>
-  				<td><button class="btn btn-success" data-toggle="modal" data-target="#myModal">EDITAR</button></td>
+          <td><button class="btn btn-success" data-toggle="modal" data-target="#myModal">VER</button></td>
+  				<td><a href="#!/producto/{{prod.id}}" class="btn btn-success">EDITAR</a></td>
   			</tr>
 		</table>
 		<ul class="pager">
@@ -66,7 +70,3 @@
 
   </div>
 </div>
-
-<pre>
-  {{posicion}}
-</pre>
