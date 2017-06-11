@@ -18,5 +18,20 @@ app.controller('productoCtrl', ['$scope', '$http' ,'$routeParams', function($sco
 		$scope.producto = data;
 
 })  
+
+	$scope.guardar = function(){
+
+
+		$http.post('php/servicios/productos.guardar.php' , $scope.producto)
+
+		.then(function(response){
+
+			console.log(response);
+
+
+
+		});	
+
+	};
  
 }]);

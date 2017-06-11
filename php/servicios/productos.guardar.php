@@ -11,11 +11,13 @@ $request =  (array) $request;
 $request['nombre'] = strtoupper($request['nombre']);
 
 
-$sql = "UPDATE alumnos SET
+$sql = "UPDATE productos SET
 			nombre    = '".$request['nombre']."',
-			telefono  = '".$request['telefono']."',
-			direccion = '".$request['direccion']."' 
-		WHERE codigo = ".$request['codigo'];
+			modelo  = '".$request['modelo']."',
+			descripcion = '".$request['descripcion']."', 
+			precio = '".$request['precio']."',
+			img = '".$request['img']."'
+		WHERE id = ".$request['id'];
 
 $Hecho = Database::ejecutar_idu($sql);
 $Respuesta = "";
