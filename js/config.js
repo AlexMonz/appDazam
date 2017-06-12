@@ -29,5 +29,10 @@ app.config( function ($routeProvider) {
 			controller: 'productoCtrl'
 			
 		})
+		.when('/admin', {
+			templateUrl: 'paginas/index.html',
+			
+			
+		})
 		.otherwise({ redirectTo: '/' })
 });

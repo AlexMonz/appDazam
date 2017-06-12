@@ -120,9 +120,47 @@ margin-bottom: 0;
 
 .img-thumbnail{
 
-	width: 300px;
-	
+	width: 300px;	
 
+}
+
+.articulo{
+	margin: 10px auto;
+	height: 350px;
+	border: 1px solid;
+
+}
+.titulo{
+	text-align: center;
+	border: 1px solid;
+	height: 50px;
+}
+
+.foto{
+	border: 1px solid;
+	height: 250px;
+}
+
+.foto img{
+	width: 100%;
+	
+}
+
+.precio{
+	border: 1px solid;
+	height: 50px;
+}
+.descripcion{
+	border: 1px solid;
+	height: 250px;
+}
+.descripcion p{
+	pading
+}
+
+.botones{
+	border: 1px solid;
+	height: 50px;
 }
 
 /* -- FIN IMAGEN CATALOGO --*/
