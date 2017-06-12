@@ -1,21 +1,21 @@
-var app = angula.module('login.loginService', []);
+var app = angular.module('login.loginService', []);
 
-// app.factory('LoginService', ['$http', '$q', function( $http , $q ){
+app.factory('LoginService', ['$http', '$q', function( $http , $q ){
 	
-// 	var self = {
+	var self = {
 
-// 		login: function(datos){
+		login: function(datos){
 
-// 			var d = $q.defer();
-
-
-// 			return d.promise;
-// 		}
+			var d = $q.defer();
 
 
-// 	};
+			return d.promise;
+		}
 
-// 	return self;
+
+	};
+
+	return self;
 
 	
-// }])
+}])

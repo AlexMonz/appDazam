@@ -8,21 +8,3 @@ app.controller('mainCtrl', ['$scope', function($scope){
  
 
 }])
-
- .factory('LoginService', ['$http' , '$q' function ($http , $q) {
-    
-     var self = {
-
-        login: function(datos){
-
-          var d = $q.defer();
-
-          return d.promise;
-
-        }
-
-     }; 
-
-      return self;
-
-  }])
