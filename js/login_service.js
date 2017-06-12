@@ -8,6 +8,17 @@ app.factory('LoginService', ['$http', '$q', function( $http , $q ){
 
 			var d = $q.defer();
 
+				$http.post('php/servicios/post.verificar.php', datos)
+
+				.then(function(response) {
+
+				var data = response.data;
+
+    			console.log( data );
+				d.resolve(data)
+
+				}); 
+
 
 			return d.promise;
 		}
@@ -19,3 +30,5 @@ app.factory('LoginService', ['$http', '$q', function( $http , $q ){
 
 	
 }])
+
+
