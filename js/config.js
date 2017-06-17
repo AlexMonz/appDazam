@@ -12,7 +12,7 @@ app.config( function ($routeProvider) {
 			templateUrl: 'paginas/contacto.html'
 		})
 		.when('/Calderas', {
-			templateUrl: 'paginas/calderas.html'
+			templateUrl: 'paginas/calderas.html',
 		})
 		.when('/Calefaccion', {
 			templateUrl: 'paginas/calefaccion.html'
@@ -20,8 +20,19 @@ app.config( function ($routeProvider) {
 		.when('/Instalaciones', {
 			templateUrl: 'paginas/instalaciones.html'
 		})
+		.when('/productos', {
+			templateUrl: 'paginas/productos.html',
+			controller: 'productosCtrl'
+		})
+		.when('/producto/:id', {
+			templateUrl: 'paginas/producto.html',
+			controller: 'productoCtrl'
+			
+		})
 		.when('/admin', {
-			templateUrl: 'paginas/panel.html'
+			templateUrl: 'paginas/index.html',
+			
+			
 		})
 		.otherwise({ redirectTo: '/' })
 });

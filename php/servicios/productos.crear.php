@@ -1,3 +1,4 @@
+
 <?php
 // Incluir la clase de base de datos
 include_once("../classes/class.Database.php");
@@ -11,17 +12,19 @@ $request =  (array) $request;
 $request['nombre'] = strtoupper($request['nombre']);
 
 
-$sql = "UPDATE alumnos SET
-			nombre    = '".$request['nombre']."',
-			telefono  = '".$request['telefono']."',
-			direccion = '".$request['direccion']."' 
-		WHERE codigo = ".$request['codigo'];
+$sql = "INSERT INTO productos(nombre, modelo, descripcion, precio, img) 
+		VALUES ( '". $request['nombre'] ."',
+				 '".$request['modelo']."',
+				 '".$request['descripcion']."',
+				 '".$request['precio']."',
+				 '".$request['img']."' )";
+
 
 $Hecho = Database::ejecutar_idu($sql);
 $Respuesta = "";
 
 if ($Hecho == "1") {
-	$Respuesta = json_encode( array('err' => false, 'mensaje'=>'Registro Actualizado.' ));
+	$Respuesta = json_encode( array('err' => false, 'mensaje'=>'Registro Insertado.' ));
 }else{
 	$Respuesta = json_encode( array('err' => true, 'mensaje'=> $Hecho ));
 }

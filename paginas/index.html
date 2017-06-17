@@ -1,26 +1,39 @@
+
 <div class="container-fluid">
-<div class="row">
-    <div class="col-md-3"></div>
-  <div class="col-md-6" >
-  <h1 class="titulo_form">LOGIN</h1>
+<div class="col-sm-6 col-md-4"></div>
+<div class="col-sm-6 col-md-4">
+  <form name="forma" ng-submit="ingresar(datos)">
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Usuario</label>
+    <input  type="text" 
+            class="form-control" 
+            placeholder="Usuario"
+            name="usuario"
+            required="required"
+            ng-model="datos.usuario">
   </div>
-  <div class="col-md-3"></div>
-  </div>
- <div class="container-fluid container_form">
- 	  <div class="row">
-    <div class="col-md-3"></div>
-  <div class="col-md-6">
-  <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">ID USUARIO</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+    <label for="exampleInputPassword1">Password</label>
+    <input  type="password" 
+            class="form-control"  
+            placeholder="Password"
+            name="contrasena"
+            required="required"
+            ng-model="datos.contrasena">
   </div>
-   <div class="form-group">
-    <label for="exampleInputEmail1">PASSWORD</label>
-    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="">
-  </div>
-  </div>
-  <div class="col-md-3"></div>
-  </div>
+  <button type="submit" class="btn btn-success" ng-disabled="forma.$invalid">Submit</button>
+</form>
+<br>
+<div class="alert alert-danger" ng-show="invalido">
+  <strong>Verificar !</strong>
+  {{ mensaje }}
 </div>
- </div>
+</div>
+<div class="col-sm-6 col-md-4"></div>
+
+</div>
+
+<br><br>
+<pre>
+  {{forma | json}}
+</pre>

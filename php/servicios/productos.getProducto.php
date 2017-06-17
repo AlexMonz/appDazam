@@ -16,13 +16,13 @@ $codigo = htmlentities($_GET['c']);
 
 
 // Verificar si existe
-$sql = "SELECT count(*) as Existe FROM alumnos WHERE codigo = ".$codigo;
+$sql = "SELECT count(*) as Existe FROM productos WHERE id = ".$codigo;
 $existe = Database::get_valor_query($sql,"Existe");
 
 
 if ($existe == 1) {
 	// Si existe, imprime el json
-	$sql = "SELECT * FROM alumnos WHERE codigo = ".$codigo;
+	$sql = "SELECT * FROM productos WHERE id = ".$codigo;
 	echo json_encode( Database::get_Row($sql) );	
 
 }else{
