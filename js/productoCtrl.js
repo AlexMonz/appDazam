@@ -3,6 +3,7 @@ app.controller('productoCtrl', ['$scope', '$http' ,'$routeParams', function($sco
 	var id = $routeParams.id;
 
 	$scope.actualizado = false;
+	$scope.eliminado = false;
 	$scope.producto = {};
 	$scope.creando = false;
 
@@ -31,6 +32,8 @@ app.controller('productoCtrl', ['$scope', '$http' ,'$routeParams', function($sco
 	}); 
 
 	}
+
+
 
 	
 
@@ -70,13 +73,13 @@ app.controller('productoCtrl', ['$scope', '$http' ,'$routeParams', function($sco
 
 			console.log(response);
 
-			if (response.statusText === 'OK') {
+			if (response.status == 200) {
 
 					$scope.actualizado = true;
 					setTimeout(function(){
 						$scope.actualizado = false;
 						$scope.$apply(); // es necesario al hacer cambios a destiempo en angular
-					},);
+					},2500);
 
 			};
 			
@@ -86,5 +89,36 @@ app.controller('productoCtrl', ['$scope', '$http' ,'$routeParams', function($sco
 		});	
 
 	};
+
+
+
+	$scope.eliminar = function(){
+
+		console.log("vamos a eliminar");
+
+				$http.post('php/servicios/productos.delete.php' , $scope.producto)
+
+				.then(function(response){
+
+				console.log(response);
+
+
+			if (response.status == 200) {
+
+					$scope.eliminado= true;
+					setTimeout(function(){
+						$scope.eliminado = false;
+						$scope.$apply(); // es necesario al hacer cambios a destiempo en angular
+					},2500);
+
+			};
+
+			
+
+		});
+
+
+	}
+
  
 }]);

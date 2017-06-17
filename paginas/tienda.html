@@ -1,10 +1,10 @@
 <div class="container-fluid caja">
 <div class="row" ng-repeat = "prod in productos">
-<div class="col-sm-6 col-md-4"></div>
+<div class="col-sm-6 col-md-1"></div>
 <div class="col-sm-6 col-md-7 articulo">
     
       <div class="row">
-        <div class="col-md-12 titulo"><h3>{{prod.nombre}}  <small>{{prod.modelo}}</small></h3></div>
+        <div class="col-md-12 titulo"><h3>{{prod.nombre}}<small>{{prod.modelo}}</small></h3></div>
       </div>
        <div class="row">
         <div class="col-md-4 item foto"><img src="{{prod.img}}" alt="..."></div>
@@ -14,20 +14,8 @@
         <div class="col-md-4 item botones"><a href="" class="btn btn-primary" role="button">Añadir al carro</a></div>
         <div class="col-md-8 item precio"><h2>{{prod.precio | currency: '€'}}</h2></div>
       </div>
-    
-<!--     <div class="thumbnail">
-      <img src="{{prod.img}}" alt="...">
-      <div class="caption">
-        <h3>{{prod.nombre}}</h3>
-        <p>{{prod.descripcion }}</p>
-        <h2>{{prod.precio | currency: '€'}}</h2>
-        <p>
-          <a href="" class="btn btn-primary" role="button">Añadir al carro</a>
-        </p>
-      </div>
-    </div> -->
 </div>
 </div>
-<div class="col-sm-6 col-md-1"></div>
+<div class="col-sm-6 col-md-4"></div>
 </div>
 
