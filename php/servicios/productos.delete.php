@@ -8,22 +8,14 @@ $request = json_decode($postdata);
 $request =  (array) $request;
 
 
-$request['nombre'] = strtoupper($request['nombre']);
-
-
-$sql = "UPDATE productos SET
-			nombre    = '".$request['nombre']."',
-			modelo  = '".$request['modelo']."',
-			descripcion = '".$request['descripcion']."', 
-			precio = '".$request['precio']."',
-			img = '".$request['img']."'
-		WHERE id = ".$request['id'];
+$sql = " DELETE FROM productos
+WHERE id = ".$request['id'];
 
 $Hecho = Database::ejecutar_idu($sql);
 $Respuesta = "";
 
 if ($Hecho == "1") {
-	$Respuesta = json_encode( array('err' => false, 'mensaje'=>'Registro Actualizado.' ));
+	$Respuesta = json_encode( array('err' => false, 'mensaje'=>'Registro Borrado.' ));
 }else{
 	$Respuesta = json_encode( array('err' => true, 'mensaje'=> $Hecho ));
 }

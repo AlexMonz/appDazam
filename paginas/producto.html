@@ -5,10 +5,10 @@
 	<div class="col-md-3">
 		<img src="{{producto.img}}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
 		<br><br>
-    <p class="text-success" ng-show="actualizado">¡¡¡¡ Registro Actualizado !!!!</p>
+    <p class="alert alert-success" ng-show="actualizado">¡¡¡¡ Registro Actualizado !!!!</p><p class="alert alert-danger" ng-show="eliminado">¡¡¡¡ Registro Elinidado !!!!</p>
 	</div>
 	<div class="col-md-6">
-		<form ng-submit="guardar()"> 
+		<form> 
         <div ng-hide="creando">
            <div class="form-group">
           <label>ID</label>
@@ -32,17 +32,15 @@
             <input type="text" class="form-control" ng-model="producto.precio">
           </div>
           <div class="form-group">
-            <label>IMAGEN</label>
-            <input type="text" class="form-control" ng-model="producto.img">
-          </div>
-          <div class="form-group">
             <label for="exampleInputFile">IMAGEN</label>
             <input type="file" id="exampleInputFile" uploader-model="file">
             <p class="help-block">Example block-level help text here.</p>
           </div>
-          <button type="submit" class="btn btn-success">Save changes</button>
-          <button type="button" class="btn btn-danger">Delete</button>
+          <button class="btn btn-success" ng-click="guardar()" >Save changes</button>
+          <button  class="btn btn-danger" ng-click="eliminar()">Delete</button>
+          <a  href="#!/productos" class="btn btn-warning" ng-click="eliminar()">Volver</a>
       </form>
+          
 	</div>
 	<div class="col-md-2"></div>
 </div>
