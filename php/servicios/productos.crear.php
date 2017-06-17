@@ -1,3 +1,4 @@
+
 <?php
 // Incluir la clase de base de datos
 include_once("../classes/class.Database.php");
@@ -11,10 +12,12 @@ $request =  (array) $request;
 $request['nombre'] = strtoupper($request['nombre']);
 
 
-$sql = "INSERT INTO alumnos(nombre, telefono, direccion) 
+$sql = "INSERT INTO productos(nombre, modelo, descripcion, precio, img) 
 		VALUES ( '". $request['nombre'] ."',
-				 '".$request['telefono']."',
-				 '".$request['direccion']."' )";
+				 '".$request['modelo']."',
+				 '".$request['descripcion']."',
+				 '".$request['precio']."',
+				 '".$request['img']."' )";
 
 
 $Hecho = Database::ejecutar_idu($sql);

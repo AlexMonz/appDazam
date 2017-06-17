@@ -34,7 +34,7 @@ app.controller('mainCtrl', ['$scope','LoginService' ,function($scope , LoginServ
 
   		}else{
   			console.log("data.mensaje")
-  			// window.location = data.url;
+  			window.location = data.url;
 
   		}
 

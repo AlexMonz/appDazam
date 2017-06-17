@@ -51,7 +51,7 @@ if(  isset( $request['usuario'] ) && isset( $request['contrasena'] ) ){ // ACTUA
 			$respuesta = array(
 				'err' => false,
 				'mensaje' => 'Login valido',
-				'url' => '../fac/'
+				'url' => '#!/productos'
 			);
 
 			$_SESSION['user'] = $user;
